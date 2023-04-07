@@ -12,7 +12,7 @@
 <body class="bg-black">
     <heder class="max-w-3xl m-auto">
         <div class="bg-red-800 py-4">
-            <div class="max-w-3xl m-auto flex text-lg gap-8 text-slate-100 justify-center">
+            <div class="sm:max-w-3xl m-auto flex text-sm sm:text-lg gap-4 sm:gap-8 text-slate-100 justify-center">
                 <p>Series</p>
                 <p>Movies</p>
                 <p>Сartoons</p>
@@ -22,12 +22,13 @@
         </div>
     </heder>
     <div class="background h-screen">
-        <form id="form" class="flex justify-center gap-4">
-            <input id="input" class="border border-zinc-700 p-2 mt-4 w-4/12 rounded-xl text-lg" name="movies"
-                type="text" placeholder="Enter movie name" />
-            <button id="submit" class="bg-red-800 rounded-xl text-slate-100 mt-4 px-6" type="submit">Find</button>
+        <form id="form" class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-10">
+            <input id="input" class="border border-zinc-700 p-2 mt-4 w-9/12 sm:w-4/12 rounded-xl text-sm sm:text-lg"
+                name="movies" type="text" placeholder="Enter movie name" />
+            <button id="submit" class="bg-red-800 rounded-xl text-slate-100 mt-4 px-10 sm:px-6 py-2"
+                type="submit">Find</button>
         </form>
-        <div id="container" class="max-w-5xl m-auto grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-5 gap-8 p-10">
+        <div id="container" class="max-w-5xl m-auto grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-8 p-10">
         </div>
         <div id="modalCardMenu" class="bg-slate-400 bg-opacity-50 w-screen overflow-auto fixed inset-0 hidden">
             <div class="w-4/5 xl:w-1/2 lg:w-1/2 md:w-3/5 sm:w-3/5 my-5 mx-auto">

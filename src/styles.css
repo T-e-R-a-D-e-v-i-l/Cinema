@@ -8,8 +8,8 @@
     background-position: center;
 }
 
-@media (max-width:768px) {
+@media (max-width:640px) {
     .background {
-        background: black
+        background-image: url(/images/fon.jpg);
     }
 }
