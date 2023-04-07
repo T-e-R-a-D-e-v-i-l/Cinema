@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.background {
+    background: linear-gradient(to left, rgba(246, 245, 243, 0.1), rgba(248, 248, 245, 0.1)), url(/images/cinema.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width:768px) {
+    .background {
+        background: black
+    }
+}

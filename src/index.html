@@ -9,28 +9,46 @@
     <title>Cinema</title>
 </head>
 
-<body>
+<body class="bg-black">
     <heder class="max-w-3xl m-auto">
-        <div class="bg-black text-8xl font-extrabold text-zinc-600 text-center">TV+</div>
         <div class="bg-red-800 py-4">
             <div class="max-w-3xl m-auto flex text-lg gap-8 text-slate-100 justify-center">
-                <p>Сериалы</p>
-                <p>Фильмы</p>
-                <p>Мультфильмы</p>
-                <p>Новинки</p>
-                <p>Бестселлеры</p>
+                <p>Series</p>
+                <p>Movies</p>
+                <p>Сartoons</p>
+                <p>New</p>
+                <p>Bestsellers</p>
             </div>
         </div>
     </heder>
-    <div class="bg-[url('/images/cinema.jpg')] bg-center bg-cover h-screen">
+    <div class="background h-screen">
         <form id="form" class="flex justify-center gap-4">
-            <input id="input" class="border border-zinc-700 p-2 my-16 w-4/12 rounded-xl text-lg" name="movies"
-                type="text" placeholder="Введите название фильма" />
-            <button class="bg-red-800 rounded-xl text-slate-100 my-16 px-6">Найти</button>
+            <input id="input" class="border border-zinc-700 p-2 mt-4 w-4/12 rounded-xl text-lg" name="movies"
+                type="text" placeholder="Enter movie name" />
+            <button id="submit" class="bg-red-800 rounded-xl text-slate-100 mt-4 px-6" type="submit">Find</button>
         </form>
-        <div id="container"></div>
-    </div>
-    <script type="module" src="/src/app.js" type="“module”"></script>
+        <div id="container" class="max-w-5xl m-auto grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-5 gap-8 p-10">
+        </div>
+        <div id="modalCardMenu" class="bg-slate-400 bg-opacity-50 w-screen overflow-auto fixed inset-0 hidden">
+            <div class="w-4/5 xl:w-1/2 lg:w-1/2 md:w-3/5 sm:w-3/5 my-5 mx-auto">
+                <div class="flex justify-end">
+                    <button id="buttonCloseModal" class="text-2xl text-slate-700">
+                        <?xml version="1.0" ?>
+                        <!DOCTYPE svg
+                            PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+                        <svg height="22px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1"
+                            viewBox="0 0 512 512" width="22px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path
+                                d="M437.5,386.6L306.9,256l130.6-130.6c14.1-14.1,14.1-36.8,0-50.9c-14.1-14.1-36.8-14.1-50.9,0L256,205.1L125.4,74.5  c-14.1-14.1-36.8-14.1-50.9,0c-14.1,14.1-14.1,36.8,0,50.9L205.1,256L74.5,386.6c-14.1,14.1-14.1,36.8,0,50.9  c14.1,14.1,36.8,14.1,50.9,0L256,306.9l130.6,130.6c14.1,14.1,36.8,14.1,50.9,0C451.5,423.4,451.5,400.6,437.5,386.6z" />
+                        </svg>
+                    </button>
+                </div>
+                <div id="modalCard"></div>
+            </div>
+        </div>
+
+        <script type="module" src="/src/app.js" type="“module”"></script>
 
 </body>
 
